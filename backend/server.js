@@ -12,7 +12,7 @@ app.use(express.json())
 
 // const uri = process.env.ATLAS_URI
 // mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true })
-mongoose.connect('mongodb://localhost/test', {
+mongoose.connect('mongodb://localhost/mern_exercise_tracker', {
   // connect local mongodb without username and password
   useNewUrlParser: true,
   useCreateIndex: true

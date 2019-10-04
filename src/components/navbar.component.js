@@ -25,7 +25,16 @@ export default class Navbar extends Component {
                 Create User
               </Link>
             </li>
+            <li></li>
           </ul>
+          <a
+            target="_blank"
+            className="nav-link ml-auto"
+            rel="noopener noreferrer"
+            href="https://github.com/i-python-com"
+          >
+            GitHub
+          </a>
         </div>
       </nav>
     )
