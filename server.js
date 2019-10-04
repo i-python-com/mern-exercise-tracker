@@ -10,9 +10,9 @@ const port = process.env.PORT || 5000
 app.use(cors())
 app.use(express.json())
 
-// const uri = process.env.ATLAS_URI
-// mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true })
-mongoose.connect('mongodb://localhost/mern_exercise_tracker', {
+const uri = process.env.ATLAS_URI
+
+mongoose.connect(uri, {
   // connect local mongodb without username and password
   useNewUrlParser: true,
   useCreateIndex: true
