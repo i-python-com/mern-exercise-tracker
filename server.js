@@ -13,15 +13,15 @@ app.use(express.json())
 const uri =
   'mongodb+srv://admin:mean123@cluster0-yxvzh.gcp.mongodb.net/mern_exercise_tracker?retryWrites=true&w=majority'
 
-mongoose.connect(uri, {
-  // connect local mongodb without username and password
-  useNewUrlParser: true,
-  useCreateIndex: true
-})
-const connection = mongoose.connection
-connection.once('open', () => {
-  console.log('MongoDB database connection established successfully')
-})
+mongoose
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  })
+  .then(() => console.log('MongoDB Atlas connected...'))
+  .catch(err => console.log(err))
 
 const exercisesRouter = require('./routes/exercises')
 const usersRouter = require('./routes/users')
