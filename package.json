@@ -1,8 +1,8 @@
 {
-  "name": "backend",
+  "name": "mern-exercise-tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
@@ -10,14 +10,11 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.6.6"
+    "mongoose": "^5.7.3"
   },
   "devDependencies": {
     "concurrently": "^4.1.2",
